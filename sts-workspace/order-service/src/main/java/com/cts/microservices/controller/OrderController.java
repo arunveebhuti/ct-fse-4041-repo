@@ -10,7 +10,7 @@ import com.cts.microservices.model.Order;
 import com.cts.microservices.service.OrderService;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/orders")
 public class OrderController {
 	
 	@Autowired

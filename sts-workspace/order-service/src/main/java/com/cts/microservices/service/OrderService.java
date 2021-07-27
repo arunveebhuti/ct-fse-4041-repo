@@ -16,8 +16,8 @@ public class OrderService {
 	
 	public Order getOrderDetails(String itemName, String couponCode) {
 		
-		MenuItem item=restTemplate.getForObject("http://localhost:5100/items/item-name/"+itemName,MenuItem.class);
-		Coupon coupon=restTemplate.getForObject("http://localhost:5200/coupons/coupon-code/"+couponCode,Coupon.class);
+		MenuItem item=restTemplate.getForObject("http://menu-item-service/items/item-name/"+itemName,MenuItem.class);
+		Coupon coupon=restTemplate.getForObject("http://coupon-service/coupons/coupon-code/"+couponCode,Coupon.class);
 		double finalPrice=item.getPrice()-(item.getPrice()*(coupon.getDiscount()/100));
 		return new Order(item, coupon, finalPrice);
 	}
