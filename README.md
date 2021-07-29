@@ -46,4 +46,15 @@ docker run -d --network=docker-mysql-network -e MYSQL_ROOT_PASSWORD=password -e 
 docker run -p 5000:5000 -d -e RDS_HOSTNAME=mysql -e RDS_PORT=3306 -e RDS_DB_NAME=docker -e RDS_USER=docker -e RDS_PASSWORD=docker --network=docker-mysql-network --name trainee-rest-api trainee-rest-api 
 
 ```
+### Installing Docker-compose on EC2:
 
+```bash
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+```
