@@ -20,8 +20,8 @@ public class CouponController {
 	
 	@PostConstruct
 	public void init() {
-		Coupon coupon1=new Coupon(101, "c1001", 10.0);
-		Coupon coupon2=new Coupon(102, "c1002", 15.0);
+		Coupon coupon1=new Coupon(101, "c1001", 12.0);
+		Coupon coupon2=new Coupon(102, "c1002", 18.0);
 		repo.save(coupon1);
 		repo.save(coupon2);
 	}

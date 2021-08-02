@@ -1,0 +1,12 @@
+
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:885843804602:task-definition/intcde4041-coupon-service:1"
+        LoadBalancerInfo:
+          ContainerName: "coupon-service"
+          ContainerPort: "5200"
+        PlatformVersion: "LATEST"
+
